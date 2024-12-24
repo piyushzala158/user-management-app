@@ -1,14 +1,14 @@
 //react
-import React from "react";
+import React, { Suspense } from "react";
 
 //custom components
 import UserTable from "./UserTable";
 
 const Users = () => {
   return (
-    <div>
+    <Suspense>
       <UserTable />
-    </div>
+    </Suspense>
   );
 };
 

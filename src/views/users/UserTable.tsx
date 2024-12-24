@@ -34,7 +34,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 //actions
 import { getUsers } from "@/actions/user";
 
-interface User {
+export interface User {
   id: number;
   name: string;
   email: string;
@@ -161,7 +161,7 @@ export default function UserTable() {
                             onClick: header.column.getToggleSortingHandler(),
                           }}
                         >
-                          {header?.column?.columnDef?.header ?? ""}
+                          {header?.column?.columnDef?.header as React.ReactNode}
                           {{
                             asc: <ChevronUp className="ml-2 h-4 w-4" />,
                             desc: <ChevronDown className="ml-2 h-4 w-4" />,

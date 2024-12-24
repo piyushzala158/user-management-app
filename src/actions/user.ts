@@ -1,10 +1,12 @@
 import { api } from "@/api";
-import { GET_USRES } from "@/constants/endPoints";
+import { User } from "@/views/users/UserTable";
 
-export const getUsers = (data) => {
-  return api({
-    endpoint: GET_USRES?.endPoint,
+export const getUsers = async (data?: object) => {
+  const response = await api({
+    endpoint: "/users",
     method: "GET",
     body: data,
   });
+
+  return response as User[];
 };

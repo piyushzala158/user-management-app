@@ -12,7 +12,7 @@ export async function api({
   method,
   body,
   headers,
-}: ApiFunctionProps): Promise<any> {
+}: ApiFunctionProps): Promise<unknown> {
   const url = `${API_URL}${endpoint}`;
 
   const options: RequestInit = {
